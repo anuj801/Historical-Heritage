@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Contact Us</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #141414;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-top: 50px;
+            animation: fadeIn 2s ease-in-out;
+            background: linear-gradient(90deg, #ff8c00, #ffa500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1.2em;
+            text-align: center;
+            margin: 20px auto;
+            width: 80%;
+            color: #d3d3d3;
+            line-height: 1.6;
+            animation: fadeInText 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .contact-card {
+            background-color: #1e1e1e;
+            border-radius: 15px;
+            padding: 30px;
+            width: 300px;
+            margin: 20px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+
+        .contact-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(255, 165, 0, 0.8);
+        }
+
+        .contact-card i {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #ffa500;
+            animation: iconHover 2s infinite alternate;
+        }
+
+        @keyframes iconHover {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        .contact-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ff8c00;
+        }
+
+        .contact-card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Hover effect on links */
+        .contact-card a {
+            color: #ffa500;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: #ff4500;
+        }
+
+       /* Footer */
+    body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        footer {
+            background-color: #1b1b1b;
+            padding: 40px 0;
+            color: white;
+            position: relative;
+        }
+
+        footer h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        footer .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0 50px;
+        }
+
+        footer .footer-section {
+            flex: 1;
+            margin: 20px 0;
+        }
+
+        footer .footer-section h2 {
+            font-size: 18px;
+            color: #f1c40f;
+            position: relative;
+        }
+
+        footer .footer-section p, .footer-section a {
+            color: #f0f0f0;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-section a:hover {
+            color: #f1c40f;
+        }
+
+        /* Social icons styling */
+        .footer-section .socials a {
+            margin-right: 15px;
+            font-size: 24px;
+            color: #fff;
+            transition: transform 0.3s;
+        }
+
+        .footer-section .socials a:hover {
+            transform: scale(1.2);
+            color: #f1c40f;
+        }
+
+        /* Footer copyright */
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 14px;
+            color: #f0f0f0;
+            border-top: 1px solid #444;
+        }
+
+        /* Responsive footer layout */
+        @media (max-width: 768px) {
+            footer .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer .footer-section {
+                margin: 10px 0;
+            }
+        }
+
+        /* Animation effect */
+        .footer-section {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+
+        /* Background color change on scroll */
+        body {
+            transition: background-color 0.6s;
+        }
+
+        @keyframes bgChange {
+            0% {
+                background-color: #141414;
+            }
+            50% {
+                background-color: #282828;
+            }
+            100% {
+                background-color: #141414;
+            }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .contact-card {
+                width: 100%;
+                margin: 20px 0;
+            }
+
+            .social-icons a {
+                font-size: 30px;
+            }
+        }
+ 
+    </style>
+</head>
+
+<body>
+    <h1>Contact Us</h1>
+
+    <p>Discover the rich history of India, a land that has seen the rise and fall of mighty empires, the birth of timeless civilizations, and the evolution of vibrant cultures. Whether you’re a history enthusiast, a traveler, or someone looking to connect with India's ancient heritage, our website offers you all the insights you need. From the Indus Valley Civilization to the grand architecture of the Ashok's era, immerse yourself in the stories that shaped this incredible nation.
+        Dive deep into India's incredible historical heritage. Whether you're an enthusiast, a researcher, or a curious traveler, feel free to reach out. We are here to assist you in exploring the rich cultural history of India, where ancient traditions, architecture, and stories merge to tell a mesmerizing tale of the past.
+    </p>
+
+    <div class="contact-container">
+        <!-- Phone Card -->
+        <div class="contact-card">
+            <i class='bx bxs-phone'></i>
+            <h3>Call Us</h3>
+            <p>+91 9669124053</p>
+        </div>
+
+        <!-- Email Card -->
+        <div class="contact-card">
+            <i class='bx bxs-envelope'></i>
+            <h3>Email Us</h3>
+            <p>Sharmaanuj4269@gmail.com</p>
+        </div>
+
+        <!-- Location Card -->
+        <div class="contact-card">
+            <i class='bx bxs-map'></i>
+            <h3>Visit Us</h3>
+            <p>123 Indore Lane, City, India</p>
+        </div>
+    </div>
+
+    <!-- Follow Us Section -->
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section" style="animation-delay: 0.2s;">
+                <h2>About Us</h2>
+                <p>We are dedicated to showcasing India's rich cultural and historical heritage. Our mission is to bring knowledge and history to the world.</p>
+            </div>
+            <!-- Quick Links -->
+            <div class="footer-section" style="animation-delay: 0.4s;   padding-left:50px; margin-right: 40px;"  >
+                <h2>Quick Links</h2>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="famousplaces.html">Famous Places </a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <!-- Social Media -->
+            <div class="footer-section socials" style="animation-delay: 0.6s;">
+                <h2>Follow Us</h2>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/anujsharma_18_/?hl=en"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            &copy; 2024 Anuj Sharma | All rights reserved
+        </div>
+    </footer>
+
+    <script>
+        // Background animation on scroll
+        window.addEventListener("scroll", function() {
+            document.body.style.animation = "bgChange 5s infinite alternate";
+        });
+    </script>
+
+
+  <!-- <div class="footer-bottom">
+    &copy; 2024 Anuj Sharma | All rights reserved
+</div> -->
+</body>
+
+</html>
+

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>   10  Historical Famous Places </title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F8FFAE;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        p {
+            font-size: 1.2em;
+            text-align: center;
+            margin: 20px auto;
+            width: 70%;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .places-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .place-card {
+            background-color: #fff;
+            width: 300px;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: cardAnimation 1s forwards;
+        }
+
+        .place-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .place-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .place-card .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .place-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .place-card:hover h3 {
+            color: #f67280;
+        }
+
+        .place-card p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .learn-more {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #f67280;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .learn-more:hover {
+            background-color: #c06c84;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes cardAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .places-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .place-card {
+                width: 90%;
+                margin-bottom: 30px;
+            }
+
+            p {
+                width: 90%;
+            }
+        }
+
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        footer {
+            background-color: #1b1b1b;
+            padding: 40px 0;
+            color: white;
+            position: relative;
+        }
+
+        footer h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        footer .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0 50px;
+        }
+
+        footer .footer-section {
+            flex: 1;
+            margin: 20px 0;
+        }
+
+        footer .footer-section h2 {
+            font-size: 18px;
+            color: #f1c40f;
+            position: relative;
+        }
+
+        footer .footer-section p, .footer-section a {
+            color: #f0f0f0;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-section a:hover {
+            color: #f1c40f;
+        }
+
+        /* Social icons styling */
+        .footer-section .socials a {
+            margin-right: 15px;
+            font-size: 24px;
+            color: #fff;
+            transition: transform 0.3s;
+        }
+
+        .footer-section .socials a:hover {
+            transform: scale(1.2);
+            color: #f1c40f;
+        }
+
+        /* Footer copyright */
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 14px;
+            color: #f0f0f0;
+            border-top: 1px solid #444;
+        }
+
+        /* Responsive footer layout */
+        @media (max-width: 768px) {
+            footer .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer .footer-section {
+                margin: 10px 0;
+            }
+        }
+
+        /* Animation effect */
+        .footer-section {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    
+
+
+
+    <h1 > 10 Famous   Historical Places in India</h1>
+    <p>Explore some of the most famous landmarks across India. These places hold great historical, cultural, and
+        architectural significance.</p>
+
+    <div class="places-container">
+        <!-- Place 1 -->
+        <div class="place-card" style="animation-delay: 0.2s;">
+            <img src="sanchi.jpg" alt="sanchi">
+            <div class="content">
+                <h3>Sanchi Stup</h3>
+                <p>One of the most famous places of architectural of India is sanchi stup </p>
+                <a href="sanchi.html" class="learn-more">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Place 2 -->
+        <div class="place-card" style="animation-delay: 0.4s;">
+            <img src="khajurao.jpg" alt="Khajuraho">
+            <div class="content">
+                <h3>
+                    Khajuraho Temple
+                </h3>
+                <p>One of the most famous places of architectural of India is Khajuraho Temple .</p>
+                <a href="khajuraho.html" class="learn-more">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Place 3 -->
+        <div class="place-card" style="animation-delay: 0.6s;">
+            <img src="hampi.jpg" alt="hampi">
+            <div class="content">
+                <h3>Hampi </h3>
+                <p>One of the most famous places of architectural of India is Hampi .</p>
+                <a href="Hampi.html" class="learn-more">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Place 4 -->
+        <div class="place-card" style="animation-delay: 1s;">
+            <img src="bhimbetka.jpg" alt="bhimbetka">
+            <div class="content">
+                <h3>Bhimbetka</h3>
+                <p>One of the most famous places of architectural of India is Bhimbetka .
+                </p>
+                <a href="bhimbetka.html" class="learn-more">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Place 5 -->
+        <div class="place-card" style="animation-delay: 1s;">
+            <img src="ajanta.jpeg" alt="AJANTA">
+            <div class="content">
+                <h3>Ajanta Ellora</h3>
+                <p>One of the most famous places of architectural of India is Ajanta Ellora .
+                </p>
+                <a href="ajanta.html" class="learn-more">Learn More</a>
+            </div>
+        </div>
+
+
+        <!-- Place 6 -->
+        <div class="place-card" style="animation-delay: 1s;">
+            <img src="elephantcaves.jpg" alt="elephantcaves">
+            <div class="content">
+                <h3>Elephant Caves</h3>
+                <p>One of the most famous places of architectural of India is Elephant Caves .
+                </p>
+                <a href="elephantcaves.html" class="learn-more">Learn More</a>
+            </div>
+        </div>
+
+
+        <!-- Place 7 -->
+        <div class="place-card" style="animation-delay: 1s;">
+            <img src="suntemple.jpg" alt="suntemple">
+            <div class="content">
+                <h3>Sun Temple</h3>
+                <p>One of the most famous places of architectural of India is SunTemple Konark .
+                </p>
+                <a href="suntemple.html" class="learn-more">Learn More</a>
+            </div>
+        </div>
+        <!-- Place 8 -->
+        <div class="place-card" style="animation-delay: 1s;">
+            <img src="Mahabalipuram.jpg" alt="suntemple">
+            <div class="content">
+                <h3>Mahabalipuram Temple</h3>
+                <p>One of the most famous places of architectural of India is Mahabalipuram .
+                </p>
+                <a href="mahabalipuram.html" class="learn-more">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Place 9 -->
+        <div class="place-card" style="animation-delay: 1s;">
+            <img src="temp.jpg" alt="temple">
+            <div class="content">
+                <h3>  Brihadeeswara Temple</h3>
+                <p>One of the most famous places of architectural of India is Brihadeeswara Temple .
+                </p>
+                <a href="brit.html" class="learn-more">Learn More</a>
+            </div>
+        </div>
+
+
+
+         <!-- Place 10 -->
+         <div class="place-card" style="animation-delay: 1s;">
+            <img src="meenakshi temple.jpg" alt="meenakshi">
+            <div class="content">
+                <h3>  Minakshi Temple</h3>
+                <p>One of the most famous places of architectural of India is Meenakshi Temple .
+                </p>
+                <a href="minakshitemple.html" class="learn-more">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section" style="animation-delay: 0.2s;">
+                <h2>About Us</h2>
+                <p>We are dedicated to showcasing India's rich cultural and historical heritage. Our mission is to bring knowledge and history to the world.</p>
+            </div>
+            <!-- Quick Links -->
+            <div class="footer-section" style="animation-delay: 0.4s;   padding-left:100px"  >
+                <h2>Quick Links</h2>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="famousplaces.html">Famous Places</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <!-- Social Media -->
+            <div class="footer-section socials" style="animation-delay: 0.6s;">
+                <h2>Follow Us</h2>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/anujsharma_18_/?hl=en"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            &copy; 2024 Anuj Sharma | All rights reserved
+        </div>
+    </footer>
+</body>
+
+</html>
